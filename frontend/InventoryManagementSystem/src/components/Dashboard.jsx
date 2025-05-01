@@ -15,6 +15,7 @@ import Inventory from '../components/Inventory'
 import ProductInfo from './ProductInfo';
 import Report from './Report';
 import Suppliers from './Supplier';
+import Orders from './Orders';
 const dashboardData = {
     summaryData: {
       totalProfit: 21190,
@@ -208,6 +209,19 @@ const Dashboard = () => {
         }
       
   ])
+  const [orders, setOrders] = useState([
+    // Your order data here
+    {
+      id: 1,
+      product: "Maggi",
+      orderValue: 4306,
+      quantity: "43 Packets",
+      expectedDelivery: "2022-12-11",
+      status: "Delayed",
+      supplier: "Nestle"
+    },
+    // More orders...
+  ]);
   useEffect(()=>{
     console.log(products)
   },[products])
@@ -389,6 +403,12 @@ const Dashboard = () => {
         {
             activeTab=='suppliers'&&<Suppliers suppliers={suppliers} onSuppliersChange={updatedSuppliers => setSuppliers(updatedSuppliers)} 
           />
+        }
+        {activeTab=='orders' &&
+        <Orders 
+      orders={orders} 
+      onOrdersChange={updatedOrders => setOrders(updatedOrders)} 
+    />
         }
       </div>
     </div>
