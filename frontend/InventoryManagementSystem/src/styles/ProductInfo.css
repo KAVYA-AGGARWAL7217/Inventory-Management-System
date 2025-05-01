@@ -1,0 +1,324 @@
+/* Inventory.css */
+.inventory-system {
+    font-family: Arial, sans-serif;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  /* List View Styles */
+  .list-view {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    gap: 20px;
+  }
+  
+  .categories-section, .products-section, .low-stocks-section, .not-in-stock-section {
+    background: white;
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+  
+  .categories-section h2, .products-section h2, .low-stocks-section h2, .not-in-stock-section h2 {
+    margin-top: 0;
+    color: #333;
+    font-size: 18px;
+  }
+  
+  .category-count {
+    font-size: 24px;
+    font-weight: bold;
+    color: #2c3e50;
+  }
+  
+  .category-count span {
+    font-size: 14px;
+    font-weight: normal;
+    color: #7f8c8d;
+  }
+  
+  .product-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .product-item {
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+    cursor: pointer;
+  }
+  
+  .product-item:hover {
+    background-color: #f5f5f5;
+  }
+  
+  .product-item.in-stock {
+    color: #27ae60;
+  }
+  
+  .product-item.out-of-stock {
+    color: #e74c3c;
+  }
+  
+  .product-item.low-stock {
+    color: #f39c12;
+  }
+  
+  .pagination {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+  }
+  
+  .pagination button {
+    padding: 5px 10px;
+    background: #3498db;
+    color: white;
+    border: none;
+    border-radius: 4px;
+  }
+  
+  .expiry-dates {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+  }
+  
+  .expiry-item {
+    padding: 5px;
+    background: #f8f9fa;
+    border-radius: 4px;
+    text-align: center;
+  }
+  
+  .availability-options {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+  }
+  
+  .availability-option {
+    padding: 5px 10px;
+    background: #f8f9fa;
+    border-radius: 4px;
+    font-size: 14px;
+  }
+  
+  .download-btn {
+    width: 100%;
+    padding: 8px;
+    background: #2ecc71;
+    color: white;
+    border: none;
+    border-radius: 4px;
+  }
+  
+  .add-product-btn {
+    grid-column: 1 / -1;
+    padding: 10px;
+    background: #3498db;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  /* Details View Styles */
+  .details-view {
+    background: white;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+  
+  .tabs {
+    display: flex;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 20px;
+  }
+  
+  .tab {
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+  
+  .tab.active {
+    border-bottom: 2px solid #3498db;
+    color: #3498db;
+  }
+  
+  .details-content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+  
+  .section {
+    margin-bottom: 20px;
+  }
+  
+  .section h3 {
+    border-bottom: 1px solid #eee;
+    padding-bottom: 5px;
+    color: #333;
+  }
+  
+  .detail-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+  }
+  
+  .detail-row .label {
+    color: #7f8c8d;
+  }
+  
+  .action-buttons {
+    display: flex;
+    gap: 10px;
+    margin: 20px 0;
+  }
+  
+  .edit-btn, .download-btn {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .edit-btn {
+    background: #3498db;
+    color: white;
+  }
+  
+  .download-btn {
+    background: #2ecc71;
+    color: white;
+  }
+  
+  .stock-summary {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    margin: 20px 0;
+  }
+  
+  .summary-card {
+    background: #f8f9fa;
+    border-radius: 6px;
+    padding: 15px;
+    text-align: center;
+  }
+  
+  .summary-card h4 {
+    margin: 0 0 5px 0;
+    color: #7f8c8d;
+    font-size: 14px;
+  }
+  
+  .summary-card p {
+    margin: 0;
+    font-size: 18px;
+    font-weight: bold;
+    color: #2c3e50;
+  }
+  
+  .back-btn {
+    padding: 8px 16px;
+    background: #95a5a6;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  /* Form View Styles */
+  .form-view {
+    background: white;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+  
+  .image-upload {
+    margin-bottom: 20px;
+  }
+  
+  .upload-area {
+    border: 2px dashed #ddd;
+    border-radius: 8px;
+    padding: 30px;
+    text-align: center;
+    cursor: pointer;
+  }
+  
+  .upload-area p {
+    margin: 0 0 10px 0;
+    color: #7f8c8d;
+  }
+  
+  .browse-btn {
+    padding: 8px 16px;
+    background: #3498db;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .form-fields {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+  }
+  
+  .form-group input, .form-group select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+  
+  .form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+  }
+  
+  .form-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 20px;
+  }
+  
+  .discard-btn {
+    padding: 10px 20px;
+    background: #e74c3c;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .add-product-btn {
+    padding: 10px 20px;
+    background: #2ecc71;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
